@@ -4,9 +4,9 @@ Copyright © 2022 NAME HERE <EMAIL ADDRESS>
 package cmd
 
 import (
-	"os"
-
+	"github.com/common-nighthawk/go-figure"
 	"github.com/spf13/cobra"
+	"os"
 )
 
 // rootCmd represents the base command when called without any subcommands
@@ -34,6 +34,10 @@ func Execute() {
 }
 
 func init() {
+
+	myFigure := figure.NewColorFigure("rofi", "", "cyan", true)
+	myFigure.Print()
+
 	// Here you will define your flags and configuration settings.
 	// Cobra supports persistent flags, which, if defined here,
 	// will be global for your application.
